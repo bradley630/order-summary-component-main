@@ -1,0 +1,163 @@
+:root{
+    --font-family: 'Red Hat Display', sans-serif;
+
+    /* ## Font-Weights */
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+
+    /* ### Primary */
+    --primary-50: hsl(225, 100%, 94%); /*Pale blue*/
+    --primary-900: hsl(245, 75%, 52%); /*Bright blue*/
+
+    /* ### Neutral */
+    --neutral-50: hsl(225, 100%, 98%); /*Very pale blue*/
+    --neutral-300:hsl(228, 71%, 96%);
+    --neutral-400: hsl(224, 23%, 55%); /*Desaturated blue*/
+    --neutral-900: hsl(223, 47%, 23%); /*Dark blue*/
+}
+
+/* ## Font-Size */
+.fs-13{
+    font-size: 13.5px;
+}
+.fs-16{
+    font-size: 16px;
+}
+/* ## Font-Weights */
+.fw-500{
+    font-weight : var(--font-weight-500);
+ }
+ .fw-700{
+    font-weight : var(--font-weight-700);
+ }
+ .fw-800{
+    font-weight : var(--font-weight-800);
+ }
+ /* ## Font-Colors */
+ .text-neutral-300{
+    color: var(--neutral-300);
+ }
+ .text-neutral-400{
+    color: var(--neutral-400);
+ }
+ .text-neutral-900{
+    color: var(--neutral-900);
+ }
+ .text-primary-900{
+    color: var(--primary-900);
+ }
+
+/* ## Background-Colors */
+.bg-primary-900{
+    background-color: var(--primary-900);
+}
+.bg-primary-50{
+    background-color: var(--primary-50);
+}
+.bg-neutral-50{
+    background-color: var(--neutral-50);
+}
+.bg-neutral-300{
+    background-color: var(--neutral-300);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+.main-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+.pattern-background{
+    min-height: 100vh;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-size: 100% 50%;
+    background-repeat: no-repeat;    
+}
+
+.card-order{
+    box-shadow: 4px 18px 71px -10px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    width: 400px;
+    margin: 0 30px;
+}
+
+.illustration-hero img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.order-summary-container{
+    padding: 30px 35px;
+    text-align: center;
+}
+.order-summary-header{
+    width: 270px;
+    display: inline-block;
+}
+.order-summary-header h1{
+    margin-bottom: 15px;
+}
+.order-summary-header p{
+    line-height: 25px;
+}
+
+.annual-plan{
+    margin: 30px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+.annual-plan a:hover{
+    color: hsl(261, 78%, 56%);
+    text-decoration: none;
+    transition: .25s;
+}
+.annual-plan-icon{
+    display: flex;
+    align-items: center;
+}
+.annual-plan-icon img{
+    width: 40px;
+}
+.annual-plan-price{
+    margin-left: 15px;
+    line-height: 25px;
+}
+.buttons{
+    line-height: 60px;
+}
+.buttons button{
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 12px 23px 1px rgba(33,60,206,0.31);
+}
+.buttons button:hover{
+    background-color: hsl(261, 78%, 56%);
+    transition: .25s;
+}
+.buttons a{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.buttons a:hover{
+    color: var(--neutral-900);
+    transition: .25s;
+}
+
+@media (max-width:700px){
+    .pattern-background{
+        background-image: url('images/pattern-background-mobile.svg');
+    }
+}
